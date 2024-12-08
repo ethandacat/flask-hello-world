@@ -7,6 +7,8 @@
 // @match        https://x-camp.discourse.group/*
 // @icon         https://d3bpeqsaub0i6y.cloudfront.net/user_avatar/meta.discourse.org/discourse/48/148734_2.png
 // @grant        none
+// @downloadURL  https://github.com/ethandacat/flask-hello-world/raw/refs/heads/main/api/world/d-extra/d-extra.user.js
+// @updateURL    https://github.com/ethandacat/flask-hello-world/raw/refs/heads/main/api/world/d-extra/d-extra.user.js
 // ==/UserScript==
 
 function descCode(element) {
@@ -55,7 +57,7 @@ function gText(element) {
                 break;
             case "embed":
                 var pw = `${arg} ${argt}`.replace("<a href=\"","");
-                mna = `<iframe style="width:900px;height:600px;" src="${pw}" frameborder="0"></iframe>`;
+                mna = `<iframe rel="" style="width:900px;height:600px;" src="${pw}" frameborder="0"></iframe>`;
                 break;
             default:
                 mna = "<span style='color:red; background-color:yellow; padding:1px; margin:1px; border: 1px solid red; '>Invalid Discourse Extras Tag!</span>";
