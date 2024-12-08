@@ -54,7 +54,8 @@ function gText(element) {
                 mna = `<iframe src="https://cdpn.io/${arg}/fullpage/${argt}?view=" frameborder="0" width="90%" height="600px" style="clip-path: inset(120px 0 0 0); margin-top: -120px;"></iframe>`;
                 break;
             case "embed":
-                mna = `<iframe src="${arg}" frameborder="0" width="90%" height="600px"></iframe>`;
+                var pw = `${arg} ${argt}`.replace("<a href=\"","");
+                mna = `<iframe style="width:900px;height:600px;" src="${pw}" frameborder="0"></iframe>`;
                 break;
             default:
                 mna = "<span style='color:red; background-color:yellow; padding:1px; margin:1px; border: 1px solid red; '>Invalid Discourse Extras Tag!</span>";
@@ -111,5 +112,4 @@ observer.observe(document.body, {
 
 // Initial processing of existing .cooked elements
 document.querySelectorAll('.cooked').forEach(processCookedElement);
-
 
